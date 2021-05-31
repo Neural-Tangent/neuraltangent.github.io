@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Neural Tangent</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="dist/tailwind.css" />
+
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#f68c3c">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="manifest" href="site.webmanifest">
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+
+    <style>
+        .typewriter {
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid #f68c3c; /* The typwriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            animation: 
+                typing 3s steps(70, end),
+                blink-caret .75s step-end infinite;
+        }
+
+        /* The typing effect */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #f68c3c; }
+        }
+    </style>
+</head>
+
+<body class="leading-normal tracking-normal bg-gray-300 flex h-screen" style="font-family: 'Source Sans Pro', sans-serif;">
+    <!--Hero-->
+    <div class="m-auto">
+        <div class="flex flex-auto flex-col">
+            <div class="container mx-auto flex flex-wrap flex-col items-center">
+                <!--Left Col-->
+                <div class="flex flex-row mx-auto">
+                    <div class="mx-auto w-20 w-20">
+                        <img src="img/logo.svg" />
+                    </div>
+                    <div class="flex flex-row mx-auto pl-3 text-center items-center">
+                        <p class="leading-normal text-black font-semibold text-4xl">
+                            Neural Tangent
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col p-6">
+                <p class="leading-normal text-white font-medium text-2xl typewriter">
+                    You have a need for artificial intelligence solutions. We can help.
+                </p>
+            </div>
+            <div class="flex flex-col p-6 items-center">
+                <button class="border hover:bg-gray-400 transform transition duration-500 hover:scale-105 text-white font-bold py-2 px-4 w-30 rounded-md">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
