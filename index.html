@@ -23,7 +23,6 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="manifest" href="site.webmanifest">
-    <!--Replace with your tailwind.css once created-->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
 
     <style>
@@ -32,27 +31,53 @@
             background: linear-gradient(225deg, rgba(223,223,223,1) 0%, rgba(255,216,169,1) 35%, rgba(132,234,255,1) 100%);      
         }
 
-        .typewriter {
+        .typewriter, .typewriter-2 {
             overflow: hidden; /* Ensures the content is not revealed until the animation */
             border-right: .15em solid #f68c3c; /* The typwriter cursor */
             white-space: nowrap; /* Keeps the content on a single line */
             margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-            animation: 
-                typing 3s steps(70, end),
+            animation:
+                typing 1s steps(70, end),
+                blink-caret .75s step-end infinite,
+                blink-caret-goodbye 0s forwards 1.75s;
+        }
+
+        .typewriter-2 {
+            animation:
+                hiding 2s forwards, 
+                typing-2 1s steps(70, end),
                 blink-caret .75s step-end infinite;
+            animation-delay: 2.2s;
+            opacity: 0;
+        }
+
+        @keyframes hiding {
+            from { opacity: 1; }
+            to { opacity: 1; }
         }
 
         /* The typing effect */
         @keyframes typing {
             from { width: 0 }
-            to { width: 100% }
+            to { width: 120px }
+        }
+
+        @keyframes typing-2 {
+            from { width: 0 }
+            to { width: 138px }
         }
 
         /* The typewriter cursor effect */
         @keyframes blink-caret {
-            from, to { border-color: transparent }
+            from, to { border-color: transparent; }
             50% { border-color: #f68c3c; }
         }
+
+        @keyframes blink-caret-goodbye {
+            from {border-color: tr;}
+            to {border-color: transparent;}
+        }
+
     </style>
 </head>
 
@@ -73,9 +98,12 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col p-6">
+            <div class="flex flex-col p-6 inline-flex">
                 <p class="leading-normal text-white font-medium text-2xl typewriter">
-                    You have a need for artificial intelligence solutions. We can help.
+                    You need AI.
+                </p>
+                <p class="leading-normal text-white font-medium text-2xl typewriter-2">
+                    We can help.
                 </p>
             </div>
             <div class="flex flex-col p-6 items-center">
